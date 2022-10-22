@@ -1,8 +1,12 @@
+import { initdb, postDb, deleteDb, editDb } from "./database";
 import { Workbox } from "workbox-window";
 import Editor from "./editor";
 import "./database";
+import "./header";
 import "../css/style.css";
 import Logo from "../images/logo.png";
+import { Tooltip, Toast, Popover } from "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 window.addEventListener("load", function () {
   document.getElementById("logo").src = Logo;

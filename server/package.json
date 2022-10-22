@@ -4,7 +4,7 @@
   "description": "19_module assignment",
   "main": "server.js",
   "scripts": {
-    "server": "nodemon server.js --ignore client",
+    "server": "node server.js",
     "start": "node server.js"
   },
   "keywords": [],
