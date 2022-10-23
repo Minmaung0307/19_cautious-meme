@@ -9,6 +9,8 @@ import { Tooltip, Toast, Popover } from "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 window.addEventListener("load", function () {
+  initdb();
+  fetchCard();
   document.getElementById("logo").src = Logo;
 });
 
@@ -35,7 +37,7 @@ if (typeof editor === "undefined") {
 // Check if service workers are supported
 if ("serviceWorker" in navigator) {
   // register workbox service worker
-  const workboxSW = new Workbox("/src-sw.js");
+  const workboxSW = new Workbox("/sw.js");
   workboxSW.register();
 } else {
   console.error("Service workers are not supported in this browser.");
